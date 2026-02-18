@@ -48,6 +48,16 @@ namespace Week_3
                     i++;
                 }
             }
+
+            public void setArray(int[] array)
+            {
+                int i = 0;
+                while (i < Numbers.Length)
+                {
+                    Numbers[i] = array[i];
+                    i++;
+                }
+            }
         }
     }
 }
