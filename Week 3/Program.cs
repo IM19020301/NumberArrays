@@ -23,15 +23,17 @@ namespace Week_3
         public class ArrayofNumbers
         {
             // Properties.
-            private int[] Numbers { get; set; }
+            private int[] Numbers;
+            private int Length;
 
             // Constructor.
             public ArrayofNumbers(int length)
             {
-                Numbers = new int[length];
+                Length = length;
+                Numbers = new int[Length];
 
                 int i = 0;
-                while (i < length)
+                while (i < Length)
                 {
                     Numbers[i] = (0);
                     i++;
@@ -39,24 +41,39 @@ namespace Week_3
             }
 
             // Method to output the contents of the array for debug purposes.
-            public void outputArray()
+            public void OutputArray()
             {
                 int i = 0;
-                while (i < Numbers.Length)
+                while (i < Length)
                 {
                     Console.WriteLine("Number " + (i + 1) + ": " + Numbers[i]);
                     i++;
                 }
             }
 
-            public void setArray(int[] array)
+            public void SetArray(int[] array)
             {
                 int i = 0;
-                while (i < Numbers.Length)
+                while (i < Length)
                 {
                     Numbers[i] = array[i];
                     i++;
                 }
+            }
+
+            public int FindItem(int index)
+            {
+                return Numbers[index];
+            }
+
+            public void SetItemValue(int index, int newValue)
+            {
+                Numbers[index] = newValue;
+            }
+
+            public int GetLength()
+            {
+                return Length;
             }
         }
     }
