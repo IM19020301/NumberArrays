@@ -132,6 +132,7 @@ namespace Week_3
                 buttonAddNumber.Enabled = false;
                 buttonFindMax.Enabled = true;
                 buttonAreEqual.Enabled = true;
+                buttonFindGCD.Enabled = true;
 
                 // Provids feedback through the label.
                 labelOutput.Text = "Array populated";
@@ -238,6 +239,7 @@ namespace Week_3
             labelMaxValue.Text = "Max Value: " + numberArray.FindMax();
         }
 
+        // On button press checks if the values at the two selected indexes are equal.
         private void ButtonAreEqual_Click(object sender, EventArgs e)
         {
             // Declares varaibles.
@@ -279,6 +281,56 @@ namespace Week_3
             {
                 // Provids feedback through the label.
                 labelAreEqual.Text = "Are Equal: " + numberArray.AreEqual(targetIndex1, targetIndex2);
+            }
+            else
+            {
+                // Provids feedback through the label.
+                labelOutput.Text = "Invalid index 1 or 2 are invalid";
+            }
+        }
+
+        // On button press finds the GCD of the two numbers at teh selected indexes
+        private void ButtonFindGCD_Click(object sender, EventArgs e)
+        {
+            // Declares varaibles.
+            int targetIndex1;
+            int targetIndex2;
+            bool validIndex1;
+            bool validIndex2;
+
+            // Sets variables.
+            validIndex1 = false;
+            validIndex2 = false;
+
+            // Checks if targetIndex1 is valid and able to be used.
+            if (Int32.TryParse(textBoxInput1.Text, out targetIndex1) && targetIndex1 >= 0)
+            {
+                // Marks targetIndex1 as valid.
+                validIndex1 = true;
+            }
+            else
+            {
+                // Provids feedback through the label.
+                labelOutput.Text = "Invalid index 1";
+            }
+
+            // Checks if targetIndex2 is valid and able to be used.
+            if (Int32.TryParse(textBoxInput2.Text, out targetIndex2) && targetIndex2 >= 0)
+            {
+                // Marks targetIndex2 as valid.
+                validIndex2 = true;
+            }
+            else
+            {
+                // Provids feedback through the label.
+                labelOutput.Text = "Invalid index 2";
+            }
+
+            // If both indexes are valid, both indexes are less than array length, and both indexes are not equal.
+            if (validIndex1 == true && validIndex2 == true && targetIndex1 < numberArray.GetLength() && targetIndex2 < numberArray.GetLength() && targetIndex1 != targetIndex2)
+            {
+                // Provids feedback through the label.
+                labelFindGCD.Text = "GCD: " + numberArray.CalculateGCD(targetIndex1, targetIndex2);
             }
             else
             {

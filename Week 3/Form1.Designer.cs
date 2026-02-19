@@ -46,6 +46,8 @@
             this.labelAreEqual = new System.Windows.Forms.Label();
             this.textBoxInput2 = new System.Windows.Forms.TextBox();
             this.labelInput2 = new System.Windows.Forms.Label();
+            this.buttonFindGCD = new System.Windows.Forms.Button();
+            this.labelFindGCD = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // labelNumberInput
@@ -217,11 +219,33 @@
             this.labelInput2.TabIndex = 12;
             this.labelInput2.Text = "Value/Index 2";
             // 
+            // buttonFindGCD
+            // 
+            this.buttonFindGCD.Enabled = false;
+            this.buttonFindGCD.Location = new System.Drawing.Point(377, 294);
+            this.buttonFindGCD.Name = "buttonFindGCD";
+            this.buttonFindGCD.Size = new System.Drawing.Size(88, 23);
+            this.buttonFindGCD.TabIndex = 13;
+            this.buttonFindGCD.Text = "buttonFindGCD";
+            this.buttonFindGCD.UseVisualStyleBackColor = true;
+            this.buttonFindGCD.Click += new System.EventHandler(this.ButtonFindGCD_Click);
+            // 
+            // labelFindGCD
+            // 
+            this.labelFindGCD.AutoSize = true;
+            this.labelFindGCD.Location = new System.Drawing.Point(387, 328);
+            this.labelFindGCD.Name = "labelFindGCD";
+            this.labelFindGCD.Size = new System.Drawing.Size(56, 13);
+            this.labelFindGCD.TabIndex = 14;
+            this.labelFindGCD.Text = "GCD: N/A";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.labelFindGCD);
+            this.Controls.Add(this.buttonFindGCD);
             this.Controls.Add(this.labelInput2);
             this.Controls.Add(this.textBoxInput2);
             this.Controls.Add(this.labelAreEqual);
@@ -267,6 +291,8 @@
         private System.Windows.Forms.Label labelAreEqual;
         private System.Windows.Forms.TextBox textBoxInput2;
         private System.Windows.Forms.Label labelInput2;
+        private System.Windows.Forms.Button buttonFindGCD;
+        private System.Windows.Forms.Label labelFindGCD;
     }
 }
 

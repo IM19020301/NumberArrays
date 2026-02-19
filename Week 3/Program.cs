@@ -128,6 +128,59 @@ namespace Week_3
                 return areEqual;
             }
 
+            // Method to find the greatest commmon divisor (GCD) between the two numbers.
+            public int CalculateGCD(int index1, int index2)
+            {
+                // Declares function variables
+                int number1;
+                int number2;
+                int smallerInt;
+                int difference;
+
+                // Sets function variable values.
+                number1 = Numbers[index1];
+                number2 = Numbers[index2];
+                smallerInt = 1;
+                difference = 0;
+
+                // Flips numbers if number2 is smaller than number1.
+                if (number2 < number1)
+                {
+                    (number2, number1) = (number1, number2);
+                }
+
+                // If numbers are equal than function ddoes not need to be run.
+                if (number1 == number2)
+                {
+                    difference = number1;
+                }
+                // Else runs the function as normal.
+                else
+                {
+                    // Run the calculation while the smallest number is not equal to the difference.
+                    while (smallerInt != difference)
+                    {
+                        // If number2 is smaller than number1 subtract number2 from number1.
+                        if (number2 < number1)
+                        {
+                            difference = number1 - number2;
+                            number1 = difference;
+                            smallerInt = number2;
+                        }
+                        // Else subtract number1 from number2.
+                        else
+                        {
+                            difference = number2 - number1;
+                            number2 = difference;
+                            smallerInt = number1;
+                        }
+                    }
+                }
+
+                // Returns the value of the GCD.
+                return difference;
+            }
+
             // method to get the length of the array
             public int GetLength()
             {
