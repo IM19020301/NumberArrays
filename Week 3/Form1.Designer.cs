@@ -38,6 +38,8 @@
             this.buttonSearchIndex = new System.Windows.Forms.Button();
             this.labelSearchOutput = new System.Windows.Forms.Label();
             this.buttonModifyValue = new System.Windows.Forms.Button();
+            this.labelNewValueInput = new System.Windows.Forms.Label();
+            this.textBoxNewValue = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // labelNumberInput
@@ -57,7 +59,7 @@
             this.buttonCreateArray.TabIndex = 2;
             this.buttonCreateArray.Text = "Create Array";
             this.buttonCreateArray.UseVisualStyleBackColor = true;
-            this.buttonCreateArray.Click += new System.EventHandler(this.buttonCreateArray_Click);
+            this.buttonCreateArray.Click += new System.EventHandler(this.ButtonCreateArray_Click);
             // 
             // textBoxNumberInputs
             // 
@@ -82,9 +84,9 @@
             this.buttonAddNumber.Name = "buttonAddNumber";
             this.buttonAddNumber.Size = new System.Drawing.Size(70, 24);
             this.buttonAddNumber.TabIndex = 3;
-            this.buttonAddNumber.Text = "Add Number";
+            this.buttonAddNumber.Text = "Set Values";
             this.buttonAddNumber.UseVisualStyleBackColor = true;
-            this.buttonAddNumber.Click += new System.EventHandler(this.buttonAddNumber_Click);
+            this.buttonAddNumber.Click += new System.EventHandler(this.ButtonAddNumber_Click);
             // 
             // labelAddNumber
             // 
@@ -113,7 +115,7 @@
             this.buttonSearchIndex.TabIndex = 4;
             this.buttonSearchIndex.Text = "Search";
             this.buttonSearchIndex.UseVisualStyleBackColor = true;
-            this.buttonSearchIndex.Click += new System.EventHandler(this.buttonSearchIndex_Click);
+            this.buttonSearchIndex.Click += new System.EventHandler(this.ButtonSearchIndex_Click);
             // 
             // labelSearchOutput
             // 
@@ -133,12 +135,32 @@
             this.buttonModifyValue.TabIndex = 5;
             this.buttonModifyValue.Text = "Update";
             this.buttonModifyValue.UseVisualStyleBackColor = true;
+            this.buttonModifyValue.Click += new System.EventHandler(this.ButtonModifyValue_Click);
+            // 
+            // labelNewValueInput
+            // 
+            this.labelNewValueInput.AutoSize = true;
+            this.labelNewValueInput.Location = new System.Drawing.Point(508, 80);
+            this.labelNewValueInput.Name = "labelNewValueInput";
+            this.labelNewValueInput.Size = new System.Drawing.Size(61, 13);
+            this.labelNewValueInput.TabIndex = 0;
+            this.labelNewValueInput.Text = "Input Value";
+            // 
+            // textBoxNewValue
+            // 
+            this.textBoxNewValue.Enabled = false;
+            this.textBoxNewValue.Location = new System.Drawing.Point(500, 111);
+            this.textBoxNewValue.Name = "textBoxNewValue";
+            this.textBoxNewValue.Size = new System.Drawing.Size(75, 20);
+            this.textBoxNewValue.TabIndex = 6;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.labelNewValueInput);
+            this.Controls.Add(this.textBoxNewValue);
             this.Controls.Add(this.buttonModifyValue);
             this.Controls.Add(this.labelSearchOutput);
             this.Controls.Add(this.buttonSearchIndex);
@@ -168,6 +190,8 @@
         private System.Windows.Forms.Button buttonSearchIndex;
         private System.Windows.Forms.Label labelSearchOutput;
         private System.Windows.Forms.Button buttonModifyValue;
+        private System.Windows.Forms.Label labelNewValueInput;
+        private System.Windows.Forms.TextBox textBoxNewValue;
     }
 }
 

@@ -66,6 +66,10 @@ namespace Week_3
                 return Numbers[index];
             }
 
+            public void SetItemValue(int index, int newValue)
+            {
+                Numbers[index] = newValue;
+            }
 
             public int GetLength()
             {
