@@ -127,9 +127,11 @@ namespace Week_3
                 // Enables the add number button and disables the create array button.
                 buttonSearchIndex.Enabled = true;
                 buttonModifyValue.Enabled = true;
-                textBoxNewValue.Enabled = true;
+                textBoxInput1.Enabled = true;
+                textBoxInput2.Enabled = true;
                 buttonAddNumber.Enabled = false;
                 buttonFindMax.Enabled = true;
+                buttonAreEqual.Enabled = true;
 
                 // Provids feedback through the label.
                 labelOutput.Text = "Array populated";
@@ -152,7 +154,7 @@ namespace Week_3
             validIndex = false;
 
             // Checks if targetIndex is valid and able to be used.
-            if (Int32.TryParse(textBoxNumberInputs.Text, out targetIndex) && targetIndex >= 0)
+            if (Int32.TryParse(textBoxInput1.Text, out targetIndex) && targetIndex >= 0)
             {
                 // Marks targetIndex as valid.
                 validIndex = true;
@@ -182,8 +184,8 @@ namespace Week_3
         {
             // Declares varaibles.
             int targetIndex;
-            bool validIndex;
             int newValue;
+            bool validIndex;
             bool validValue;
 
             // Sets variables.
@@ -191,7 +193,7 @@ namespace Week_3
             validValue = false;
 
             // Checks if targetIndex is valid and able to be used.
-            if (Int32.TryParse(textBoxNumberInputs.Text, out targetIndex) && targetIndex >= 0)
+            if (Int32.TryParse(textBoxInput1.Text, out targetIndex) && targetIndex >= 0)
             {
                 // Marks targetIndex as valid.
                 validIndex = true;
@@ -203,7 +205,7 @@ namespace Week_3
             }
 
             // Checks if newValue is valid and able to be used.
-            if (Int32.TryParse(textBoxNewValue.Text, out newValue) && newValue >= 0)
+            if (Int32.TryParse(textBoxInput2.Text, out newValue) && newValue >= 0)
             {
                 // Marks newValue as valid.
                 validValue = true;
@@ -234,6 +236,55 @@ namespace Week_3
         private void ButtonFindMax_Click(object sender, EventArgs e)
         {
             labelMaxValue.Text = "Max Value: " + numberArray.FindMax();
+        }
+
+        private void ButtonAreEqual_Click(object sender, EventArgs e)
+        {
+            // Declares varaibles.
+            int targetIndex1;
+            int targetIndex2;
+            bool validIndex1;
+            bool validIndex2;
+
+            // Sets variables.
+            validIndex1 = false;
+            validIndex2 = false;
+
+            // Checks if targetIndex1 is valid and able to be used.
+            if (Int32.TryParse(textBoxInput1.Text, out targetIndex1) && targetIndex1 >= 0)
+            {
+                // Marks targetIndex1 as valid.
+                validIndex1 = true;
+            }
+            else
+            {
+                // Provids feedback through the label.
+                labelOutput.Text = "Invalid index 1";
+            }
+
+            // Checks if targetIndex2 is valid and able to be used.
+            if (Int32.TryParse(textBoxInput2.Text, out targetIndex2) && targetIndex2 >= 0)
+            {
+                // Marks targetIndex2 as valid.
+                validIndex2 = true;
+            }
+            else
+            {
+                // Provids feedback through the label.
+                labelOutput.Text = "Invalid index 2";
+            }
+
+            // If both indexes are valid, both indexes are less than array length, and both indexes are not equal.
+            if (validIndex1 == true && validIndex2 == true && targetIndex1 < numberArray.GetLength() && targetIndex2 < numberArray.GetLength() && targetIndex1 != targetIndex2)
+            {
+                // Provids feedback through the label.
+                labelAreEqual.Text = "Are Equal: " + numberArray.AreEqual(targetIndex1, targetIndex2);
+            }
+            else
+            {
+                // Provids feedback through the label.
+                labelOutput.Text = "Invalid index 1 or 2 are invalid";
+            }
         }
     }
 }

@@ -38,10 +38,14 @@
             this.buttonSearchIndex = new System.Windows.Forms.Button();
             this.labelSearchOutput = new System.Windows.Forms.Label();
             this.buttonModifyValue = new System.Windows.Forms.Button();
-            this.labelNewValueInput = new System.Windows.Forms.Label();
-            this.textBoxNewValue = new System.Windows.Forms.TextBox();
+            this.labelInput1 = new System.Windows.Forms.Label();
+            this.textBoxInput1 = new System.Windows.Forms.TextBox();
             this.buttonFindMax = new System.Windows.Forms.Button();
             this.labelMaxValue = new System.Windows.Forms.Label();
+            this.buttonAreEqual = new System.Windows.Forms.Button();
+            this.labelAreEqual = new System.Windows.Forms.Label();
+            this.textBoxInput2 = new System.Windows.Forms.TextBox();
+            this.labelInput2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // labelNumberInput
@@ -139,22 +143,22 @@
             this.buttonModifyValue.UseVisualStyleBackColor = true;
             this.buttonModifyValue.Click += new System.EventHandler(this.ButtonModifyValue_Click);
             // 
-            // labelNewValueInput
+            // labelInput1
             // 
-            this.labelNewValueInput.AutoSize = true;
-            this.labelNewValueInput.Location = new System.Drawing.Point(508, 80);
-            this.labelNewValueInput.Name = "labelNewValueInput";
-            this.labelNewValueInput.Size = new System.Drawing.Size(61, 13);
-            this.labelNewValueInput.TabIndex = 0;
-            this.labelNewValueInput.Text = "Input Value";
+            this.labelInput1.AutoSize = true;
+            this.labelInput1.Location = new System.Drawing.Point(658, 299);
+            this.labelInput1.Name = "labelInput1";
+            this.labelInput1.Size = new System.Drawing.Size(73, 13);
+            this.labelInput1.TabIndex = 0;
+            this.labelInput1.Text = "Index/Index 1";
             // 
-            // textBoxNewValue
+            // textBoxInput1
             // 
-            this.textBoxNewValue.Enabled = false;
-            this.textBoxNewValue.Location = new System.Drawing.Point(500, 111);
-            this.textBoxNewValue.Name = "textBoxNewValue";
-            this.textBoxNewValue.Size = new System.Drawing.Size(75, 20);
-            this.textBoxNewValue.TabIndex = 5;
+            this.textBoxInput1.Enabled = false;
+            this.textBoxInput1.Location = new System.Drawing.Point(556, 296);
+            this.textBoxInput1.Name = "textBoxInput1";
+            this.textBoxInput1.Size = new System.Drawing.Size(75, 20);
+            this.textBoxInput1.TabIndex = 5;
             // 
             // buttonFindMax
             // 
@@ -176,15 +180,56 @@
             this.labelMaxValue.TabIndex = 8;
             this.labelMaxValue.Text = "Max Value: N/A";
             // 
+            // buttonAreEqual
+            // 
+            this.buttonAreEqual.Enabled = false;
+            this.buttonAreEqual.Location = new System.Drawing.Point(287, 293);
+            this.buttonAreEqual.Name = "buttonAreEqual";
+            this.buttonAreEqual.Size = new System.Drawing.Size(75, 23);
+            this.buttonAreEqual.TabIndex = 9;
+            this.buttonAreEqual.Text = "Equal";
+            this.buttonAreEqual.UseVisualStyleBackColor = true;
+            this.buttonAreEqual.Click += new System.EventHandler(this.ButtonAreEqual_Click);
+            // 
+            // labelAreEqual
+            // 
+            this.labelAreEqual.AutoSize = true;
+            this.labelAreEqual.Location = new System.Drawing.Point(279, 331);
+            this.labelAreEqual.Name = "labelAreEqual";
+            this.labelAreEqual.Size = new System.Drawing.Size(79, 13);
+            this.labelAreEqual.TabIndex = 10;
+            this.labelAreEqual.Text = "Are Equal: N/A";
+            // 
+            // textBoxInput2
+            // 
+            this.textBoxInput2.Enabled = false;
+            this.textBoxInput2.Location = new System.Drawing.Point(555, 331);
+            this.textBoxInput2.Name = "textBoxInput2";
+            this.textBoxInput2.Size = new System.Drawing.Size(76, 20);
+            this.textBoxInput2.TabIndex = 11;
+            // 
+            // labelInput2
+            // 
+            this.labelInput2.AutoSize = true;
+            this.labelInput2.Location = new System.Drawing.Point(658, 331);
+            this.labelInput2.Name = "labelInput2";
+            this.labelInput2.Size = new System.Drawing.Size(74, 13);
+            this.labelInput2.TabIndex = 12;
+            this.labelInput2.Text = "Value/Index 2";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.labelInput2);
+            this.Controls.Add(this.textBoxInput2);
+            this.Controls.Add(this.labelAreEqual);
+            this.Controls.Add(this.buttonAreEqual);
             this.Controls.Add(this.labelMaxValue);
             this.Controls.Add(this.buttonFindMax);
-            this.Controls.Add(this.labelNewValueInput);
-            this.Controls.Add(this.textBoxNewValue);
+            this.Controls.Add(this.labelInput1);
+            this.Controls.Add(this.textBoxInput1);
             this.Controls.Add(this.buttonModifyValue);
             this.Controls.Add(this.labelSearchOutput);
             this.Controls.Add(this.buttonSearchIndex);
@@ -214,10 +259,14 @@
         private System.Windows.Forms.Button buttonSearchIndex;
         private System.Windows.Forms.Label labelSearchOutput;
         private System.Windows.Forms.Button buttonModifyValue;
-        private System.Windows.Forms.Label labelNewValueInput;
-        private System.Windows.Forms.TextBox textBoxNewValue;
+        private System.Windows.Forms.Label labelInput1;
+        private System.Windows.Forms.TextBox textBoxInput1;
         private System.Windows.Forms.Button buttonFindMax;
         private System.Windows.Forms.Label labelMaxValue;
+        private System.Windows.Forms.Button buttonAreEqual;
+        private System.Windows.Forms.Label labelAreEqual;
+        private System.Windows.Forms.TextBox textBoxInput2;
+        private System.Windows.Forms.Label labelInput2;
     }
 }
 

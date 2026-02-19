@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -81,12 +82,13 @@ namespace Week_3
                 Numbers[index] = newValue;
             }
 
+            // Method to find the highest value in the array.
             public int FindMax()
             {
-                // Declares highestValue.
+                // Declares variables.
                 int highestValue;
 
-                // Sets highestValue.
+                // Sets variables.
                 highestValue = 0;
 
                 // While loop that runs for the entire length of the Numbers array.
@@ -106,8 +108,30 @@ namespace Week_3
                 return highestValue;
             }
 
+            // Method to find if two values in the array are equal.
+            public bool AreEqual(int index1, int index2)
+            {
+                // Declares variables.
+                bool areEqual;
+
+                // Sets variables.
+                areEqual = false;
+
+                // If the value at the first index is the same as the value at the second index set areEqual to true.
+                if (Numbers[index1] == Numbers[index2])
+                {
+                    // Sets areEqual to true
+                    areEqual = true;
+                }
+
+                // returns areEqual.
+                return areEqual;
+            }
+
+            // method to get the length of the array
             public int GetLength()
             {
+                // returns Length.
                 return Length;
             }
         }
