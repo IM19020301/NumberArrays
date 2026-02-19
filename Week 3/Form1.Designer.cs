@@ -40,6 +40,8 @@
             this.buttonModifyValue = new System.Windows.Forms.Button();
             this.labelNewValueInput = new System.Windows.Forms.Label();
             this.textBoxNewValue = new System.Windows.Forms.TextBox();
+            this.buttonFindMax = new System.Windows.Forms.Button();
+            this.labelMaxValue = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // labelNumberInput
@@ -132,7 +134,7 @@
             this.buttonModifyValue.Location = new System.Drawing.Point(500, 177);
             this.buttonModifyValue.Name = "buttonModifyValue";
             this.buttonModifyValue.Size = new System.Drawing.Size(75, 23);
-            this.buttonModifyValue.TabIndex = 5;
+            this.buttonModifyValue.TabIndex = 6;
             this.buttonModifyValue.Text = "Update";
             this.buttonModifyValue.UseVisualStyleBackColor = true;
             this.buttonModifyValue.Click += new System.EventHandler(this.ButtonModifyValue_Click);
@@ -152,13 +154,35 @@
             this.textBoxNewValue.Location = new System.Drawing.Point(500, 111);
             this.textBoxNewValue.Name = "textBoxNewValue";
             this.textBoxNewValue.Size = new System.Drawing.Size(75, 20);
-            this.textBoxNewValue.TabIndex = 6;
+            this.textBoxNewValue.TabIndex = 5;
+            // 
+            // buttonFindMax
+            // 
+            this.buttonFindMax.Enabled = false;
+            this.buttonFindMax.Location = new System.Drawing.Point(179, 293);
+            this.buttonFindMax.Name = "buttonFindMax";
+            this.buttonFindMax.Size = new System.Drawing.Size(75, 23);
+            this.buttonFindMax.TabIndex = 7;
+            this.buttonFindMax.Text = "Max";
+            this.buttonFindMax.UseVisualStyleBackColor = true;
+            this.buttonFindMax.Click += new System.EventHandler(this.ButtonFindMax_Click);
+            // 
+            // labelMaxValue
+            // 
+            this.labelMaxValue.AutoSize = true;
+            this.labelMaxValue.Location = new System.Drawing.Point(176, 331);
+            this.labelMaxValue.Name = "labelMaxValue";
+            this.labelMaxValue.Size = new System.Drawing.Size(83, 13);
+            this.labelMaxValue.TabIndex = 8;
+            this.labelMaxValue.Text = "Max Value: N/A";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.labelMaxValue);
+            this.Controls.Add(this.buttonFindMax);
             this.Controls.Add(this.labelNewValueInput);
             this.Controls.Add(this.textBoxNewValue);
             this.Controls.Add(this.buttonModifyValue);
@@ -192,6 +216,8 @@
         private System.Windows.Forms.Button buttonModifyValue;
         private System.Windows.Forms.Label labelNewValueInput;
         private System.Windows.Forms.TextBox textBoxNewValue;
+        private System.Windows.Forms.Button buttonFindMax;
+        private System.Windows.Forms.Label labelMaxValue;
     }
 }
 

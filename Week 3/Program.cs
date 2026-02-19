@@ -32,6 +32,7 @@ namespace Week_3
                 Length = length;
                 Numbers = new int[Length];
 
+                // Sets all values in Numbers to 0.
                 int i = 0;
                 while (i < Length)
                 {
@@ -43,32 +44,66 @@ namespace Week_3
             // Method to output the contents of the array for debug purposes.
             public void OutputArray()
             {
+                // While loop that runs for the entire length of the Numbers array.
                 int i = 0;
                 while (i < Length)
                 {
+                    // Outputs the current value to the console.
                     Console.WriteLine("Number " + (i + 1) + ": " + Numbers[i]);
                     i++;
                 }
             }
 
+            // Method to set the value of the Numbers array.
             public void SetArray(int[] array)
             {
+                // While loop that runs for the entire length of the Numbers array.
                 int i = 0;
                 while (i < Length)
                 {
+                    // Sets the value of Numbers to the same value as array.
                     Numbers[i] = array[i];
                     i++;
                 }
             }
 
+            // Method to output the value at a specific index.
             public int FindItem(int index)
             {
+                // Returns value at selected index.
                 return Numbers[index];
             }
 
+            // Method to update the value at a specific index.
             public void SetItemValue(int index, int newValue)
             {
+                // Sets value at selected index.
                 Numbers[index] = newValue;
+            }
+
+            public int FindMax()
+            {
+                // Declares highestValue.
+                int highestValue;
+
+                // Sets highestValue.
+                highestValue = 0;
+
+                // While loop that runs for the entire length of the Numbers array.
+                int i = 0;
+                while (i < Length)
+                {
+                    // If the value in Numbers is higher than the highest value set the highest value to the value.
+                    if (Numbers[i] > highestValue)
+                    {
+                        // Sets the highestValue to the currently selected value from Numbers.
+                        highestValue = Numbers[i];
+                    }
+                    i++;
+                }
+
+                // returns highestValue.
+                return highestValue;
             }
 
             public int GetLength()

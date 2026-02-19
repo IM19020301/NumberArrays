@@ -129,6 +129,7 @@ namespace Week_3
                 buttonModifyValue.Enabled = true;
                 textBoxNewValue.Enabled = true;
                 buttonAddNumber.Enabled = false;
+                buttonFindMax.Enabled = true;
 
                 // Provids feedback through the label.
                 labelOutput.Text = "Array populated";
@@ -140,6 +141,7 @@ namespace Week_3
             }
         }
 
+        // On button press finds the value stored in numberArray at the inputed index.
         private void ButtonSearchIndex_Click(object sender, EventArgs e)
         {
             // Declares varaibles.
@@ -175,6 +177,7 @@ namespace Week_3
             }
         }
 
+        // On button press replaces the value stored in numberArray at the inputed index with the inpuded value.
         private void ButtonModifyValue_Click(object sender, EventArgs e)
         {
             // Declares varaibles.
@@ -225,6 +228,12 @@ namespace Week_3
                 // Provids feedback through the label.
                 labelOutput.Text = "Invalid index or new value";
             }
+        }
+
+        // On button press finds the maximum value stored in numberArray.
+        private void ButtonFindMax_Click(object sender, EventArgs e)
+        {
+            labelMaxValue.Text = "Max Value: " + numberArray.FindMax();
         }
     }
 }
