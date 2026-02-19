@@ -35,6 +35,9 @@
             this.buttonAddNumber = new System.Windows.Forms.Button();
             this.labelAddNumber = new System.Windows.Forms.Label();
             this.labelOutput = new System.Windows.Forms.Label();
+            this.buttonSearchIndex = new System.Windows.Forms.Button();
+            this.labelSearchOutput = new System.Windows.Forms.Label();
+            this.buttonModifyValue = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // labelNumberInput
@@ -48,7 +51,7 @@
             // 
             // buttonCreateArray
             // 
-            this.buttonCreateArray.Location = new System.Drawing.Point(260, 177);
+            this.buttonCreateArray.Location = new System.Drawing.Point(146, 178);
             this.buttonCreateArray.Name = "buttonCreateArray";
             this.buttonCreateArray.Size = new System.Drawing.Size(75, 23);
             this.buttonCreateArray.TabIndex = 2;
@@ -66,7 +69,7 @@
             // labelLength
             // 
             this.labelLength.AutoSize = true;
-            this.labelLength.Location = new System.Drawing.Point(267, 217);
+            this.labelLength.Location = new System.Drawing.Point(153, 218);
             this.labelLength.Name = "labelLength";
             this.labelLength.Size = new System.Drawing.Size(66, 13);
             this.labelLength.TabIndex = 0;
@@ -75,7 +78,7 @@
             // buttonAddNumber
             // 
             this.buttonAddNumber.Enabled = false;
-            this.buttonAddNumber.Location = new System.Drawing.Point(362, 176);
+            this.buttonAddNumber.Location = new System.Drawing.Point(248, 177);
             this.buttonAddNumber.Name = "buttonAddNumber";
             this.buttonAddNumber.Size = new System.Drawing.Size(70, 24);
             this.buttonAddNumber.TabIndex = 3;
@@ -86,7 +89,7 @@
             // labelAddNumber
             // 
             this.labelAddNumber.AutoSize = true;
-            this.labelAddNumber.Location = new System.Drawing.Point(359, 217);
+            this.labelAddNumber.Location = new System.Drawing.Point(245, 218);
             this.labelAddNumber.Name = "labelAddNumber";
             this.labelAddNumber.Size = new System.Drawing.Size(89, 13);
             this.labelAddNumber.TabIndex = 0;
@@ -95,17 +98,50 @@
             // labelOutput
             // 
             this.labelOutput.AutoSize = true;
-            this.labelOutput.Location = new System.Drawing.Point(303, 245);
+            this.labelOutput.Location = new System.Drawing.Point(189, 246);
             this.labelOutput.Name = "labelOutput";
             this.labelOutput.Size = new System.Drawing.Size(65, 13);
             this.labelOutput.TabIndex = 4;
             this.labelOutput.Text = "Output: N/A";
+            // 
+            // buttonSearchIndex
+            // 
+            this.buttonSearchIndex.Enabled = false;
+            this.buttonSearchIndex.Location = new System.Drawing.Point(409, 177);
+            this.buttonSearchIndex.Name = "buttonSearchIndex";
+            this.buttonSearchIndex.Size = new System.Drawing.Size(75, 23);
+            this.buttonSearchIndex.TabIndex = 4;
+            this.buttonSearchIndex.Text = "Search";
+            this.buttonSearchIndex.UseVisualStyleBackColor = true;
+            this.buttonSearchIndex.Click += new System.EventHandler(this.buttonSearchIndex_Click);
+            // 
+            // labelSearchOutput
+            // 
+            this.labelSearchOutput.AutoSize = true;
+            this.labelSearchOutput.Location = new System.Drawing.Point(424, 218);
+            this.labelSearchOutput.Name = "labelSearchOutput";
+            this.labelSearchOutput.Size = new System.Drawing.Size(60, 13);
+            this.labelSearchOutput.TabIndex = 0;
+            this.labelSearchOutput.Text = "Value: N/A";
+            // 
+            // buttonModifyValue
+            // 
+            this.buttonModifyValue.Enabled = false;
+            this.buttonModifyValue.Location = new System.Drawing.Point(500, 177);
+            this.buttonModifyValue.Name = "buttonModifyValue";
+            this.buttonModifyValue.Size = new System.Drawing.Size(75, 23);
+            this.buttonModifyValue.TabIndex = 5;
+            this.buttonModifyValue.Text = "Update";
+            this.buttonModifyValue.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.buttonModifyValue);
+            this.Controls.Add(this.labelSearchOutput);
+            this.Controls.Add(this.buttonSearchIndex);
             this.Controls.Add(this.labelOutput);
             this.Controls.Add(this.labelAddNumber);
             this.Controls.Add(this.buttonAddNumber);
@@ -129,6 +165,9 @@
         private System.Windows.Forms.Button buttonAddNumber;
         private System.Windows.Forms.Label labelAddNumber;
         private System.Windows.Forms.Label labelOutput;
+        private System.Windows.Forms.Button buttonSearchIndex;
+        private System.Windows.Forms.Label labelSearchOutput;
+        private System.Windows.Forms.Button buttonModifyValue;
     }
 }
 

@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Runtime.Remoting.Lifetime;
 using System.Security.Policy;
 using System.Text;
@@ -49,7 +50,7 @@ namespace Week_3
             // If length is valid creates a new ArrayofNumbers and then then sets the length of the array.
             if (validLenght == true)
             {
-                // Creates a new insatnce of ArrayofNumbers with the set length.
+                // Creates a new instance of ArrayofNumbers with the set length.
                 numberArray = new ArrayofNumbers(length);
 
                 // Provids feedback through the labels.
@@ -65,8 +66,9 @@ namespace Week_3
                     i++;
                 }
 
-                // Enables the add number button.
+                // Enables the add number button and disables the create array button.
                 buttonAddNumber.Enabled = true;
+                buttonCreateArray.Enabled = false;
 
                 // Updates the label texts.
                 labelAddNumber.Text = "Add Number: 0/" + length;
@@ -119,10 +121,12 @@ namespace Week_3
                 }
 
                 // Sets the number values of the numberArray to match the inputArray.
-                numberArray.setArray(inputArray);
+                numberArray.SetArray(inputArray);
 
-                // Outputs the contents of the array for debug purposes.
-                numberArray.outputArray();
+                // Enables the add number button and disables the create array button.
+                buttonSearchIndex.Enabled = true;
+                buttonModifyValue.Enabled = true;
+                buttonAddNumber.Enabled = false;
 
                 // Updates the label texts.
                 labelOutput.Text = "Array populated";
@@ -131,6 +135,40 @@ namespace Week_3
             {
                 // Updates the label texts.
                 labelOutput.Text = "Incorrect amount of numbers, number count must match length.";
+            }
+        }
+
+        private void buttonSearchIndex_Click(object sender, EventArgs e)
+        {
+            // Declares varaibles.
+            int targetIndex;
+            bool validIndex;
+
+            // Sets variables.
+            validIndex = false;
+
+            // Checks if number is valid and able to be used.
+            if (Int32.TryParse(textBoxNumberInputs.Text, out targetIndex) && targetIndex >= 0)
+            {
+                // Marks number as valid.
+                validIndex = true;
+            }
+            else
+            {
+                // Provids feedback through the label.
+                labelOutput.Text = "Invalid search index";
+            }
+
+            // If number is valid adds it to the inputArray.
+            if (validIndex == true && targetIndex < numberArray.GetLength())
+            {
+                // Updates the label texts.
+                labelSearchOutput.Text = "Found value: " + numberArray.FindItem(targetIndex);
+            }
+            else
+            {
+                // Provids feedback through the label.
+                labelOutput.Text = "Invalid search index";
             }
         }
     }
