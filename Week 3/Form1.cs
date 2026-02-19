@@ -134,6 +134,7 @@ namespace Week_3
                 buttonFindGCD.Enabled = true;
                 buttonFindSum.Enabled = true;
                 buttonFindAverage.Enabled = true;
+                buttonToString.Enabled = true;
 
                 // Provids feedback through the label.
                 labelOutput.Text = "Array populated";
@@ -350,6 +351,12 @@ namespace Week_3
         private void ButtonFindAverage_Click(object sender, EventArgs e)
         {
             labelFindAverage.Text = "Average: " + numberArray.FindAverage();
+        }
+
+        // On button press outputs the entire array in one long string.
+        private void ButtonToString_Click(object sender, EventArgs e)
+        {
+            labelOutput.Text = numberArray.ToString();
         }
     }
 }

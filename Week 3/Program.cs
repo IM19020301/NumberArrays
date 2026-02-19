@@ -201,6 +201,32 @@ namespace Week_3
                 return average;
             }
 
+            // Method to output the entire array in one long string.
+            public override string ToString()
+            {
+                // Declares variables.
+                string text;
+
+                // Sets variables.
+                text = "";
+
+                // While loop that runs for the entire length of the Numbers array.
+                int i = 0;
+                while (i < Length)
+                {
+                    // Adds the number and a ", " to the end of the text output.
+                    text += Numbers[i];
+                    text += ", ";
+                    i++;
+                }
+
+                // cuts off the ending ", "
+                text = text.Remove(text.Length - 2);
+
+                // returns all of the array in one long string.
+                return text;
+            }
+
             // method to get the length of the array
             public int GetLength()
             {

@@ -51,6 +51,7 @@
             this.labelFindSum = new System.Windows.Forms.Label();
             this.labelFindAverage = new System.Windows.Forms.Label();
             this.buttonFindAverage = new System.Windows.Forms.Button();
+            this.buttonToString = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // labelNumberInput
@@ -273,11 +274,23 @@
             this.buttonFindAverage.UseVisualStyleBackColor = true;
             this.buttonFindAverage.Click += new System.EventHandler(this.ButtonFindAverage_Click);
             // 
+            // buttonToString
+            // 
+            this.buttonToString.Enabled = false;
+            this.buttonToString.Location = new System.Drawing.Point(368, 363);
+            this.buttonToString.Name = "buttonToString";
+            this.buttonToString.Size = new System.Drawing.Size(75, 23);
+            this.buttonToString.TabIndex = 19;
+            this.buttonToString.Text = "ToString";
+            this.buttonToString.UseVisualStyleBackColor = true;
+            this.buttonToString.Click += new System.EventHandler(this.ButtonToString_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.buttonToString);
             this.Controls.Add(this.labelFindAverage);
             this.Controls.Add(this.buttonFindAverage);
             this.Controls.Add(this.labelFindSum);
@@ -333,6 +346,7 @@
         private System.Windows.Forms.Label labelFindSum;
         private System.Windows.Forms.Label labelFindAverage;
         private System.Windows.Forms.Button buttonFindAverage;
+        private System.Windows.Forms.Button buttonToString;
     }
 }
 
