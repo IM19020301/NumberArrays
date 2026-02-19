@@ -181,6 +181,13 @@ namespace Week_3
                 return difference;
             }
 
+            // Method to return the sum of the array.
+            public int FindSum()
+            {
+                // Returns sum of Numbers.
+                return Numbers.Sum();
+            }
+
             // method to get the length of the array
             public int GetLength()
             {

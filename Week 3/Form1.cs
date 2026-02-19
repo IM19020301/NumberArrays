@@ -71,7 +71,6 @@ namespace Week_3
                 buttonCreateArray.Enabled = false;
 
                 // Provids feedback through the labels.
-                labelAddNumber.Text = "Add Number: 0/" + length;
                 labelNumberInput.Text = "Please input numbers with ',' between each one.";
                 labelOutput.Text = "Array created.";
             }
@@ -337,6 +336,12 @@ namespace Week_3
                 // Provids feedback through the label.
                 labelOutput.Text = "Invalid index 1 or 2 are invalid";
             }
+        }
+
+        // On button press finds the sum of all values in numberArray.
+        private void ButtonFindSum_Click(object sender, EventArgs e)
+        {
+            labelFindSum.Text = "Sum: " + numberArray.FindSum();
         }
     }
 }

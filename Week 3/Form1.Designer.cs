@@ -33,7 +33,6 @@
             this.textBoxNumberInputs = new System.Windows.Forms.TextBox();
             this.labelLength = new System.Windows.Forms.Label();
             this.buttonAddNumber = new System.Windows.Forms.Button();
-            this.labelAddNumber = new System.Windows.Forms.Label();
             this.labelOutput = new System.Windows.Forms.Label();
             this.buttonSearchIndex = new System.Windows.Forms.Button();
             this.labelSearchOutput = new System.Windows.Forms.Label();
@@ -48,6 +47,8 @@
             this.labelInput2 = new System.Windows.Forms.Label();
             this.buttonFindGCD = new System.Windows.Forms.Button();
             this.labelFindGCD = new System.Windows.Forms.Label();
+            this.buttonFindSum = new System.Windows.Forms.Button();
+            this.labelFindSum = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // labelNumberInput
@@ -95,15 +96,6 @@
             this.buttonAddNumber.Text = "Set Values";
             this.buttonAddNumber.UseVisualStyleBackColor = true;
             this.buttonAddNumber.Click += new System.EventHandler(this.ButtonAddNumber_Click);
-            // 
-            // labelAddNumber
-            // 
-            this.labelAddNumber.AutoSize = true;
-            this.labelAddNumber.Location = new System.Drawing.Point(245, 218);
-            this.labelAddNumber.Name = "labelAddNumber";
-            this.labelAddNumber.Size = new System.Drawing.Size(89, 13);
-            this.labelAddNumber.TabIndex = 0;
-            this.labelAddNumber.Text = "Add Number: 0/?";
             // 
             // labelOutput
             // 
@@ -239,11 +231,32 @@
             this.labelFindGCD.TabIndex = 14;
             this.labelFindGCD.Text = "GCD: N/A";
             // 
+            // buttonFindSum
+            // 
+            this.buttonFindSum.Location = new System.Drawing.Point(179, 363);
+            this.buttonFindSum.Name = "buttonFindSum";
+            this.buttonFindSum.Size = new System.Drawing.Size(75, 23);
+            this.buttonFindSum.TabIndex = 15;
+            this.buttonFindSum.Text = "Sum";
+            this.buttonFindSum.UseVisualStyleBackColor = true;
+            this.buttonFindSum.Click += new System.EventHandler(this.ButtonFindSum_Click);
+            // 
+            // labelFindSum
+            // 
+            this.labelFindSum.AutoSize = true;
+            this.labelFindSum.Location = new System.Drawing.Point(189, 400);
+            this.labelFindSum.Name = "labelFindSum";
+            this.labelFindSum.Size = new System.Drawing.Size(54, 13);
+            this.labelFindSum.TabIndex = 16;
+            this.labelFindSum.Text = "Sum: N/A";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.labelFindSum);
+            this.Controls.Add(this.buttonFindSum);
             this.Controls.Add(this.labelFindGCD);
             this.Controls.Add(this.buttonFindGCD);
             this.Controls.Add(this.labelInput2);
@@ -258,7 +271,6 @@
             this.Controls.Add(this.labelSearchOutput);
             this.Controls.Add(this.buttonSearchIndex);
             this.Controls.Add(this.labelOutput);
-            this.Controls.Add(this.labelAddNumber);
             this.Controls.Add(this.buttonAddNumber);
             this.Controls.Add(this.labelLength);
             this.Controls.Add(this.textBoxNumberInputs);
@@ -278,7 +290,6 @@
         private System.Windows.Forms.TextBox textBoxNumberInputs;
         private System.Windows.Forms.Label labelLength;
         private System.Windows.Forms.Button buttonAddNumber;
-        private System.Windows.Forms.Label labelAddNumber;
         private System.Windows.Forms.Label labelOutput;
         private System.Windows.Forms.Button buttonSearchIndex;
         private System.Windows.Forms.Label labelSearchOutput;
@@ -293,6 +304,8 @@
         private System.Windows.Forms.Label labelInput2;
         private System.Windows.Forms.Button buttonFindGCD;
         private System.Windows.Forms.Label labelFindGCD;
+        private System.Windows.Forms.Button buttonFindSum;
+        private System.Windows.Forms.Label labelFindSum;
     }
 }
 
