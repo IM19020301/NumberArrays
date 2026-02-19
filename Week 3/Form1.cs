@@ -132,6 +132,8 @@ namespace Week_3
                 buttonFindMax.Enabled = true;
                 buttonAreEqual.Enabled = true;
                 buttonFindGCD.Enabled = true;
+                buttonFindSum.Enabled = true;
+                buttonFindAverage.Enabled = true;
 
                 // Provids feedback through the label.
                 labelOutput.Text = "Array populated";
@@ -342,6 +344,12 @@ namespace Week_3
         private void ButtonFindSum_Click(object sender, EventArgs e)
         {
             labelFindSum.Text = "Sum: " + numberArray.FindSum();
+        }
+
+        // On button press finds the average of all values in numberArray.
+        private void ButtonFindAverage_Click(object sender, EventArgs e)
+        {
+            labelFindAverage.Text = "Average: " + numberArray.FindAverage();
         }
     }
 }

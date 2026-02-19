@@ -49,6 +49,8 @@
             this.labelFindGCD = new System.Windows.Forms.Label();
             this.buttonFindSum = new System.Windows.Forms.Button();
             this.labelFindSum = new System.Windows.Forms.Label();
+            this.labelFindAverage = new System.Windows.Forms.Label();
+            this.buttonFindAverage = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // labelNumberInput
@@ -233,6 +235,7 @@
             // 
             // buttonFindSum
             // 
+            this.buttonFindSum.Enabled = false;
             this.buttonFindSum.Location = new System.Drawing.Point(179, 363);
             this.buttonFindSum.Name = "buttonFindSum";
             this.buttonFindSum.Size = new System.Drawing.Size(75, 23);
@@ -250,11 +253,33 @@
             this.labelFindSum.TabIndex = 16;
             this.labelFindSum.Text = "Sum: N/A";
             // 
+            // labelFindAverage
+            // 
+            this.labelFindAverage.AutoSize = true;
+            this.labelFindAverage.Location = new System.Drawing.Point(283, 400);
+            this.labelFindAverage.Name = "labelFindAverage";
+            this.labelFindAverage.Size = new System.Drawing.Size(73, 13);
+            this.labelFindAverage.TabIndex = 18;
+            this.labelFindAverage.Text = "Average: N/A";
+            // 
+            // buttonFindAverage
+            // 
+            this.buttonFindAverage.Enabled = false;
+            this.buttonFindAverage.Location = new System.Drawing.Point(273, 363);
+            this.buttonFindAverage.Name = "buttonFindAverage";
+            this.buttonFindAverage.Size = new System.Drawing.Size(75, 23);
+            this.buttonFindAverage.TabIndex = 17;
+            this.buttonFindAverage.Text = "Average";
+            this.buttonFindAverage.UseVisualStyleBackColor = true;
+            this.buttonFindAverage.Click += new System.EventHandler(this.ButtonFindAverage_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.labelFindAverage);
+            this.Controls.Add(this.buttonFindAverage);
             this.Controls.Add(this.labelFindSum);
             this.Controls.Add(this.buttonFindSum);
             this.Controls.Add(this.labelFindGCD);
@@ -306,6 +331,8 @@
         private System.Windows.Forms.Label labelFindGCD;
         private System.Windows.Forms.Button buttonFindSum;
         private System.Windows.Forms.Label labelFindSum;
+        private System.Windows.Forms.Label labelFindAverage;
+        private System.Windows.Forms.Button buttonFindAverage;
     }
 }
 

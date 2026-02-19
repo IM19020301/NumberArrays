@@ -188,6 +188,19 @@ namespace Week_3
                 return Numbers.Sum();
             }
 
+            // Method to return the average of the array.
+            public int FindAverage()
+            {
+                // Declares variables.
+                int average;
+
+                // Sets variables.
+                average = FindSum() / GetLength();
+
+                // Returns average of Numbers.
+                return average;
+            }
+
             // method to get the length of the array
             public int GetLength()
             {
