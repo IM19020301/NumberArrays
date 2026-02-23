@@ -228,7 +228,33 @@ namespace Week_3
                 return text;
             }
 
-            // method to get the length of the array
+            // Method to multiply each element by an input scalar.
+            public void ScalarMultiply(int scalar)
+            {
+                // While loop that runs for the entire length of the Numbers array.
+                int i = 0;
+                while (i < Length)
+                {
+                    // Multiplies the element by the scalar
+                    Numbers[i] *= scalar;
+                    i++;
+                }
+            }
+
+            // Method to multiply each element by an input scalar.
+            public void AddConstant(int constant)
+            {
+                // While loop that runs for the entire length of the Numbers array.
+                int i = 0;
+                while (i < Length)
+                {
+                    // Multiplies the element by the scalar
+                    Numbers[i] += constant;
+                    i++;
+                }
+            }
+
+            // Method to get the length of the array
             public int GetLength()
             {
                 // returns Length.
