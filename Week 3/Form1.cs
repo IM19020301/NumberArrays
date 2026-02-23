@@ -66,69 +66,13 @@ namespace Week_3
                     i++;
                 }
 
-                // Enables the add number button and disables the create array button.
-                buttonAddNumber.Enabled = true;
+                // Enables and disables buttons.
+                buttonAddNumber.Enabled = false;
                 buttonCreateArray.Enabled = false;
-
-                // Provids feedback through the labels.
-                labelNumberInput.Text = "Please input numbers with ',' between each one.";
-                labelOutput.Text = "Array created.";
-            }
-        }
-
-        // On button press creates a new inputArray array and then puts its contents into ArrayofNumbers.
-        private void ButtonAddNumber_Click(object sender, EventArgs e)
-        {
-            // Declares varaibles.
-            int number;
-
-            // Sets variables.
-            string inputNumbers = textBoxNumberInputs.Text;
-            string[] subNumbers = inputNumbers.Split(',');
-
-            // If the number of input numbers matches the length of the inputArray then continues.
-            if (subNumbers.Length == inputArray.Length)
-            {
-                // Goes through each number in the inputNumbers string and validates them before adding them to the inputArray.
-                int i = 0;
-                foreach (string str in subNumbers)
-                {
-                    // Declares varaibles.
-                    bool validNumber;
-
-                    // Sets variables.
-                    validNumber = false;
-
-                    // Checks if number is valid and able to be used.
-                    if (Int32.TryParse(str, out number) && number >= 0)
-                    {
-                        // Marks number as valid.
-                        validNumber = true;
-                    }
-                    else
-                    {
-                        // Provids feedback through the label.
-                        labelOutput.Text = "number " + i + " is invalid.";
-                    }
-
-                    // If number is valid adds it to the inputArray.
-                    if (validNumber == true)
-                    {
-                        // Adds the number to the inputArray.
-                        inputArray[i] = number;
-                        i++;
-                    }
-                }
-
-                // Sets the number values of the numberArray to match the inputArray.
-                numberArray.SetArray(inputArray);
-
-                // Enables the add number button and disables the create array button.
                 buttonSearchIndex.Enabled = true;
                 buttonModifyValue.Enabled = true;
                 textBoxInput1.Enabled = true;
                 textBoxInput2.Enabled = true;
-                buttonAddNumber.Enabled = false;
                 buttonFindMax.Enabled = true;
                 buttonAreEqual.Enabled = true;
                 buttonFindGCD.Enabled = true;
@@ -136,14 +80,77 @@ namespace Week_3
                 buttonFindAverage.Enabled = true;
                 buttonToString.Enabled = true;
 
-                // Provids feedback through the label.
-                labelOutput.Text = "Array populated";
+                // Provids feedback through the labels.
+                labelOutput.Text = "Empty array created.";
             }
-            else
+        }
+
+        // On button press creates a new inputArray array and then puts its contents into ArrayofNumbers.
+        private void ButtonAddNumber_Click(object sender, EventArgs e)
+        {
+            // Declares varaibles.
+            int length;
+            int number;
+
+            // Sets variables.
+            string inputNumbers = textBoxNumberInputs.Text;
+            string[] subNumbers = inputNumbers.Split(',');
+            length = subNumbers.Length;
+
+            // Creates the input array.
+            inputArray = new int[length];
+
+            // Goes through each number in the inputNumbers string and validates them before adding them to the inputArray.
+            int i = 0;
+            foreach (string str in subNumbers)
             {
-                // Provids feedback through the label.
-                labelOutput.Text = "Incorrect amount of numbers, number count must match length.";
+                // Declares varaibles.
+                bool validNumber;
+
+                // Sets variables.
+                validNumber = false;
+
+                // Checks if number is valid and able to be used.
+                if (Int32.TryParse(str, out number) && number >= 0)
+                {
+                    // Marks number as valid.
+                    validNumber = true;
+                }
+                else
+                {
+                    // Provids feedback through the label.
+                    labelOutput.Text = "number " + i + " is invalid.";
+                }
+
+                // If number is valid adds it to the inputArray.
+                if (validNumber == true)
+                {
+                    // Adds the number to the inputArray.
+                    inputArray[i] = number;
+                    i++;
+                }
             }
+
+            // Creates a new instance of ArrayofNumbers with the set length.
+            numberArray = new ArrayofNumbers(inputArray);
+
+            // Enables and disables buttons.
+            buttonAddNumber.Enabled = false;
+            buttonCreateArray.Enabled = false;
+            buttonSearchIndex.Enabled = true;
+            buttonModifyValue.Enabled = true;
+            textBoxInput1.Enabled = true;
+            textBoxInput2.Enabled = true;
+            buttonFindMax.Enabled = true;
+            buttonAreEqual.Enabled = true;
+            buttonFindGCD.Enabled = true;
+            buttonFindSum.Enabled = true;
+            buttonFindAverage.Enabled = true;
+            buttonToString.Enabled = true;
+
+            // Provids feedback through the label.
+            labelLength.Text = "Length: " + length;
+            labelOutput.Text = "Full array created";
         }
 
         // On button press finds the value stored in numberArray at the inputed index.

@@ -57,19 +57,19 @@
             // labelNumberInput
             // 
             this.labelNumberInput.AutoSize = true;
-            this.labelNumberInput.Location = new System.Drawing.Point(323, 80);
+            this.labelNumberInput.Location = new System.Drawing.Point(257, 84);
             this.labelNumberInput.Name = "labelNumberInput";
-            this.labelNumberInput.Size = new System.Drawing.Size(67, 13);
+            this.labelNumberInput.Size = new System.Drawing.Size(208, 13);
             this.labelNumberInput.TabIndex = 0;
-            this.labelNumberInput.Text = "Input Length";
+            this.labelNumberInput.Text = "Input Length or numbers seperarted by \",\".";
             // 
             // buttonCreateArray
             // 
-            this.buttonCreateArray.Location = new System.Drawing.Point(146, 178);
+            this.buttonCreateArray.Location = new System.Drawing.Point(109, 178);
             this.buttonCreateArray.Name = "buttonCreateArray";
-            this.buttonCreateArray.Size = new System.Drawing.Size(75, 23);
+            this.buttonCreateArray.Size = new System.Drawing.Size(112, 23);
             this.buttonCreateArray.TabIndex = 2;
-            this.buttonCreateArray.Text = "Create Array";
+            this.buttonCreateArray.Text = "Create Empty Array";
             this.buttonCreateArray.UseVisualStyleBackColor = true;
             this.buttonCreateArray.Click += new System.EventHandler(this.ButtonCreateArray_Click);
             // 
@@ -91,12 +91,11 @@
             // 
             // buttonAddNumber
             // 
-            this.buttonAddNumber.Enabled = false;
-            this.buttonAddNumber.Location = new System.Drawing.Point(248, 177);
+            this.buttonAddNumber.Location = new System.Drawing.Point(239, 178);
             this.buttonAddNumber.Name = "buttonAddNumber";
-            this.buttonAddNumber.Size = new System.Drawing.Size(70, 24);
+            this.buttonAddNumber.Size = new System.Drawing.Size(109, 24);
             this.buttonAddNumber.TabIndex = 3;
-            this.buttonAddNumber.Text = "Set Values";
+            this.buttonAddNumber.Text = "Create Full Array";
             this.buttonAddNumber.UseVisualStyleBackColor = true;
             this.buttonAddNumber.Click += new System.EventHandler(this.ButtonAddNumber_Click);
             // 

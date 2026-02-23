@@ -42,6 +42,20 @@ namespace Week_3
                 }
             }
 
+            public ArrayofNumbers(int[] numbers)
+            {
+                Length = numbers.Length;
+                Numbers = new int[Length];
+
+                // Sets the value of Numbers to the same value as the input array.
+                int i = 0;
+                while (i < Length)
+                {
+                    Numbers[i] = numbers[i];
+                    i++;
+                }
+            }
+
             // Method to output the contents of the array for debug purposes.
             public void OutputArray()
             {
@@ -51,19 +65,6 @@ namespace Week_3
                 {
                     // Outputs the current value to the console.
                     Console.WriteLine("Number " + (i + 1) + ": " + Numbers[i]);
-                    i++;
-                }
-            }
-
-            // Method to set the value of the Numbers array.
-            public void SetArray(int[] array)
-            {
-                // While loop that runs for the entire length of the Numbers array.
-                int i = 0;
-                while (i < Length)
-                {
-                    // Sets the value of Numbers to the same value as array.
-                    Numbers[i] = array[i];
                     i++;
                 }
             }
