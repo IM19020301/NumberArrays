@@ -44,7 +44,7 @@ namespace Week_3
             else
             {
                 // Provids feedback through the label.
-                labelOutput.Text = "length is invalid";
+                labelOutput.Text = "Invalid input";
             }
 
             // If length is valid creates a new ArrayofNumbers and then then sets the length of the array.
@@ -172,7 +172,7 @@ namespace Week_3
             else
             {
                 // Provids feedback through the label.
-                labelOutput.Text = "Invalid search index";
+                labelOutput.Text = "Invalid index, index must be an integer that is within array bounds";
             }
 
             // If targetIndex is valid search the for the value at targetIndex.
@@ -181,11 +181,6 @@ namespace Week_3
                 // Provids feedback through the labels.
                 labelSearchOutput.Text = "Found value: " + numberArray.FindItem(targetIndex);
                 labelOutput.Text = "Search successful";
-            }
-            else
-            {
-                // Provids feedback through the label.
-                labelOutput.Text = "Invalid search index";
             }
         }
 
@@ -211,7 +206,7 @@ namespace Week_3
             else
             {
                 // Provids feedback through the label.
-                labelOutput.Text = "Invalid search index";
+                labelOutput.Text = "Invalid index, index must be an integer that is within array bounds";
             }
 
             // Checks if newValue is valid and able to be used.
@@ -223,7 +218,7 @@ namespace Week_3
             else
             {
                 // Provids feedback through the label.
-                labelOutput.Text = "Invalid new value";
+                labelOutput.Text = "Invalid new value, new value must be a positive integer";
             }
 
             // If targetIndex and newValue is valid updates value at targetIndex.
@@ -234,11 +229,6 @@ namespace Week_3
 
                 // Provids feedback through the label.
                 labelOutput.Text = "Update successful";
-            }
-            else
-            {
-                // Provids feedback through the label.
-                labelOutput.Text = "Invalid index or new value";
             }
         }
 
@@ -270,7 +260,7 @@ namespace Week_3
             else
             {
                 // Provids feedback through the label.
-                labelOutput.Text = "Invalid index 1";
+                labelOutput.Text = "Invalid index 1, index must be an integer that is within array bounds";
             }
 
             // Checks if targetIndex2 is valid and able to be used.
@@ -282,7 +272,7 @@ namespace Week_3
             else
             {
                 // Provids feedback through the label.
-                labelOutput.Text = "Invalid index 2";
+                labelOutput.Text = "Invalid index 2, index must be an integer that is within array bounds";
             }
 
             // If both indexes are valid, both indexes are less than array length, and both indexes are not equal.
@@ -291,10 +281,10 @@ namespace Week_3
                 // Provids feedback through the label.
                 labelAreEqual.Text = "Are Equal: " + numberArray.AreEqual(targetIndex1, targetIndex2);
             }
-            else
+            else if (targetIndex1 == targetIndex2)
             {
                 // Provids feedback through the label.
-                labelOutput.Text = "Invalid index 1 or 2 are invalid";
+                labelOutput.Text = "Indexes must not be equal";
             }
         }
 
@@ -320,7 +310,7 @@ namespace Week_3
             else
             {
                 // Provids feedback through the label.
-                labelOutput.Text = "Invalid index 1";
+                labelOutput.Text = "Invalid index 1, index must be an integer that is within array bounds";
             }
 
             // Checks if targetIndex2 is valid and able to be used.
@@ -332,19 +322,24 @@ namespace Week_3
             else
             {
                 // Provids feedback through the label.
-                labelOutput.Text = "Invalid index 2";
+                labelOutput.Text = "Invalid index 2, index must be an integer that is within array bounds";
             }
 
             // If both indexes are valid, both indexes are less than array length, and both indexes are not equal.
-            if (validIndex1 == true && validIndex2 == true && targetIndex1 < numberArray.GetLength() && targetIndex2 < numberArray.GetLength() && targetIndex1 != targetIndex2)
+            if (numberArray.FindItem(targetIndex1) == 0 || numberArray.FindItem(targetIndex2) == 0)
+            {
+                // Provids feedback through the label.
+                labelOutput.Text = "Values must not equal 0";
+            }
+            else if(validIndex1 == true && validIndex2 == true && targetIndex1 < numberArray.GetLength() && targetIndex2 < numberArray.GetLength() && targetIndex1 != targetIndex2)
             {
                 // Provids feedback through the label.
                 labelFindGCD.Text = "GCD: " + numberArray.CalculateGCD(targetIndex1, targetIndex2);
             }
-            else
+            else if (targetIndex1 == targetIndex2)
             {
                 // Provids feedback through the label.
-                labelOutput.Text = "Index 1 or 2 are invalid";
+                labelOutput.Text = "Indexes must not be equal";
             }
         }
 
@@ -385,7 +380,7 @@ namespace Week_3
             else
             {
                 // Provids feedback through the label.
-                labelOutput.Text = "Invalid scalar";
+                labelOutput.Text = "Invalid scalar, scalar must be a positive integer";
             }
 
             // If scalar is valid.
@@ -396,11 +391,6 @@ namespace Week_3
 
                 // Provids feedback through the label.
                 labelOutput.Text = "Array multiplied by scalar";
-            }
-            else
-            {
-                // Provids feedback through the label.
-                labelOutput.Text = "Invalid scalar";
             }
         }
 
@@ -423,7 +413,7 @@ namespace Week_3
             else
             {
                 // Provids feedback through the label.
-                labelOutput.Text = "Invalid constant";
+                labelOutput.Text = "Invalid constant, constant must be a positive integer";
             }
 
             // If constant is valid.
@@ -434,11 +424,6 @@ namespace Week_3
 
                 // Provids feedback through the label.
                 labelOutput.Text = "Constant added to array.";
-            }
-            else
-            {
-                // Provids feedback through the label.
-                labelOutput.Text = "Invalid constant";
             }
         }
     }
