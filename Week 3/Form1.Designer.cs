@@ -52,6 +52,7 @@
             this.labelFindAverage = new System.Windows.Forms.Label();
             this.buttonFindAverage = new System.Windows.Forms.Button();
             this.buttonToString = new System.Windows.Forms.Button();
+            this.buttonScalarMultiply = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // labelNumberInput
@@ -159,7 +160,7 @@
             // buttonFindMax
             // 
             this.buttonFindMax.Enabled = false;
-            this.buttonFindMax.Location = new System.Drawing.Point(179, 293);
+            this.buttonFindMax.Location = new System.Drawing.Point(117, 294);
             this.buttonFindMax.Name = "buttonFindMax";
             this.buttonFindMax.Size = new System.Drawing.Size(75, 23);
             this.buttonFindMax.TabIndex = 7;
@@ -170,7 +171,7 @@
             // labelMaxValue
             // 
             this.labelMaxValue.AutoSize = true;
-            this.labelMaxValue.Location = new System.Drawing.Point(176, 331);
+            this.labelMaxValue.Location = new System.Drawing.Point(114, 332);
             this.labelMaxValue.Name = "labelMaxValue";
             this.labelMaxValue.Size = new System.Drawing.Size(83, 13);
             this.labelMaxValue.TabIndex = 8;
@@ -179,7 +180,7 @@
             // buttonAreEqual
             // 
             this.buttonAreEqual.Enabled = false;
-            this.buttonAreEqual.Location = new System.Drawing.Point(287, 293);
+            this.buttonAreEqual.Location = new System.Drawing.Point(225, 294);
             this.buttonAreEqual.Name = "buttonAreEqual";
             this.buttonAreEqual.Size = new System.Drawing.Size(75, 23);
             this.buttonAreEqual.TabIndex = 9;
@@ -190,7 +191,7 @@
             // labelAreEqual
             // 
             this.labelAreEqual.AutoSize = true;
-            this.labelAreEqual.Location = new System.Drawing.Point(279, 331);
+            this.labelAreEqual.Location = new System.Drawing.Point(217, 332);
             this.labelAreEqual.Name = "labelAreEqual";
             this.labelAreEqual.Size = new System.Drawing.Size(79, 13);
             this.labelAreEqual.TabIndex = 10;
@@ -216,7 +217,7 @@
             // buttonFindGCD
             // 
             this.buttonFindGCD.Enabled = false;
-            this.buttonFindGCD.Location = new System.Drawing.Point(377, 294);
+            this.buttonFindGCD.Location = new System.Drawing.Point(315, 295);
             this.buttonFindGCD.Name = "buttonFindGCD";
             this.buttonFindGCD.Size = new System.Drawing.Size(88, 23);
             this.buttonFindGCD.TabIndex = 13;
@@ -227,7 +228,7 @@
             // labelFindGCD
             // 
             this.labelFindGCD.AutoSize = true;
-            this.labelFindGCD.Location = new System.Drawing.Point(387, 328);
+            this.labelFindGCD.Location = new System.Drawing.Point(325, 329);
             this.labelFindGCD.Name = "labelFindGCD";
             this.labelFindGCD.Size = new System.Drawing.Size(56, 13);
             this.labelFindGCD.TabIndex = 14;
@@ -236,7 +237,7 @@
             // buttonFindSum
             // 
             this.buttonFindSum.Enabled = false;
-            this.buttonFindSum.Location = new System.Drawing.Point(179, 363);
+            this.buttonFindSum.Location = new System.Drawing.Point(117, 364);
             this.buttonFindSum.Name = "buttonFindSum";
             this.buttonFindSum.Size = new System.Drawing.Size(75, 23);
             this.buttonFindSum.TabIndex = 15;
@@ -247,7 +248,7 @@
             // labelFindSum
             // 
             this.labelFindSum.AutoSize = true;
-            this.labelFindSum.Location = new System.Drawing.Point(189, 400);
+            this.labelFindSum.Location = new System.Drawing.Point(127, 401);
             this.labelFindSum.Name = "labelFindSum";
             this.labelFindSum.Size = new System.Drawing.Size(54, 13);
             this.labelFindSum.TabIndex = 16;
@@ -256,7 +257,7 @@
             // labelFindAverage
             // 
             this.labelFindAverage.AutoSize = true;
-            this.labelFindAverage.Location = new System.Drawing.Point(283, 400);
+            this.labelFindAverage.Location = new System.Drawing.Point(221, 401);
             this.labelFindAverage.Name = "labelFindAverage";
             this.labelFindAverage.Size = new System.Drawing.Size(73, 13);
             this.labelFindAverage.TabIndex = 18;
@@ -265,7 +266,7 @@
             // buttonFindAverage
             // 
             this.buttonFindAverage.Enabled = false;
-            this.buttonFindAverage.Location = new System.Drawing.Point(273, 363);
+            this.buttonFindAverage.Location = new System.Drawing.Point(211, 364);
             this.buttonFindAverage.Name = "buttonFindAverage";
             this.buttonFindAverage.Size = new System.Drawing.Size(75, 23);
             this.buttonFindAverage.TabIndex = 17;
@@ -276,7 +277,7 @@
             // buttonToString
             // 
             this.buttonToString.Enabled = false;
-            this.buttonToString.Location = new System.Drawing.Point(368, 363);
+            this.buttonToString.Location = new System.Drawing.Point(306, 364);
             this.buttonToString.Name = "buttonToString";
             this.buttonToString.Size = new System.Drawing.Size(75, 23);
             this.buttonToString.TabIndex = 19;
@@ -284,11 +285,22 @@
             this.buttonToString.UseVisualStyleBackColor = true;
             this.buttonToString.Click += new System.EventHandler(this.ButtonToString_Click);
             // 
+            // buttonScalarMultiply
+            // 
+            this.buttonScalarMultiply.Location = new System.Drawing.Point(427, 295);
+            this.buttonScalarMultiply.Name = "buttonScalarMultiply";
+            this.buttonScalarMultiply.Size = new System.Drawing.Size(87, 23);
+            this.buttonScalarMultiply.TabIndex = 20;
+            this.buttonScalarMultiply.Text = "Scalar Multiply";
+            this.buttonScalarMultiply.UseVisualStyleBackColor = true;
+            this.buttonScalarMultiply.Click += new System.EventHandler(this.ButtonScalarMultiply_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.buttonScalarMultiply);
             this.Controls.Add(this.buttonToString);
             this.Controls.Add(this.labelFindAverage);
             this.Controls.Add(this.buttonFindAverage);
@@ -346,6 +358,7 @@
         private System.Windows.Forms.Label labelFindAverage;
         private System.Windows.Forms.Button buttonFindAverage;
         private System.Windows.Forms.Button buttonToString;
+        private System.Windows.Forms.Button buttonScalarMultiply;
     }
 }
 

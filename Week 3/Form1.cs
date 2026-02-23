@@ -344,7 +344,7 @@ namespace Week_3
             else
             {
                 // Provids feedback through the label.
-                labelOutput.Text = "Invalid index 1 or 2 are invalid";
+                labelOutput.Text = "Index 1 or 2 are invalid";
             }
         }
 
@@ -365,5 +365,44 @@ namespace Week_3
         {
             labelOutput.Text = numberArray.ToString();
         }
+
+        // On button press scales entire array by an input scalar.
+        private void ButtonScalarMultiply_Click(object sender, EventArgs e)
+        {
+            // Declares varaibles.
+            int scalar;
+            bool validScalar;
+
+            // Sets variables.
+            validScalar = false;
+
+            // Checks if targetIndex2 is valid and able to be used.
+            if (Int32.TryParse(textBoxInput2.Text, out scalar) && scalar >= 0)
+            {
+                // Marks targetIndex2 as valid.
+                validScalar = true;
+            }
+            else
+            {
+                // Provids feedback through the label.
+                labelOutput.Text = "Invalid scalar";
+            }
+
+            // If scalar is valid.
+            if (validScalar == true)
+            {
+                // Runs numberArray the method.
+                numberArray.ScalarMultiply(scalar);
+
+                // Provids feedback through the label.
+                labelOutput.Text = "Array multiplied by scalar";
+            }
+            else
+            {
+                // Provids feedback through the label.
+                labelOutput.Text = "Invalid scalar";
+            }
+        }
+
     }
 }
