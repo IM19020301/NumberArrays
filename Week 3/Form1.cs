@@ -296,6 +296,7 @@ namespace Week_3
             int targetIndex2;
             bool validIndex1;
             bool validIndex2;
+            int GCD;
 
             // Sets variables.
             validIndex1 = false;
@@ -333,8 +334,17 @@ namespace Week_3
             }
             else if(validIndex1 == true && validIndex2 == true && targetIndex1 < numberArray.GetLength() && targetIndex2 < numberArray.GetLength() && targetIndex1 != targetIndex2)
             {
-                // Provids feedback through the label.
-                labelFindGCD.Text = "GCD: " + numberArray.CalculateGCD(targetIndex1, targetIndex2);
+                GCD = numberArray.CalculateGCD(targetIndex1, targetIndex2);
+                if (GCD != 0)
+                {
+                    // Provids feedback through the label.
+                    labelFindGCD.Text = "GCD: " + GCD;
+                }
+                else
+                {
+                    // Provids feedback through the label.
+                    labelFindGCD.Text = "GCD: N/A";
+                }
             }
             else if (targetIndex1 == targetIndex2)
             {
@@ -425,6 +435,21 @@ namespace Week_3
                 // Provids feedback through the label.
                 labelOutput.Text = "Constant added to array.";
             }
+        }
+
+        private void labelMaxValue_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelAreEqual_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelFindGCD_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

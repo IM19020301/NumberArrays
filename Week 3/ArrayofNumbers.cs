@@ -124,48 +124,58 @@ namespace Week_3
             int smallerInt;
             int difference;
 
-            // Sets function variable values.
-            number1 = Numbers[index1];
-            number2 = Numbers[index2];
-            smallerInt = 1;
-            difference = 0;
+            if (index1 < Length && index2 < Length)
+            {
+                // Sets function variable values.
+                number1 = Numbers[index1];
+                number2 = Numbers[index2];
+                smallerInt = 1;
+                difference = 0;
 
-            // Flips numbers if number2 is smaller than number1.
-            if (number2 < number1)
-            {
-                (number2, number1) = (number1, number2);
-            }
-
-            // If numbers are equal than function ddoes not need to be run.
-            if (number1 == number2)
-            {
-                difference = number1;
-            }
-            // Else runs the function as normal.
-            else
-            {
-                // Run the calculation while the smallest number is not equal to the difference.
-                while (smallerInt != difference)
+                // Flips numbers if number2 is smaller than number1.
+                if (number2 < number1)
                 {
-                    // If number2 is smaller than number1 subtract number2 from number1.
-                    if (number2 < number1)
+                    (number2, number1) = (number1, number2);
+                }
+
+                // If numbers are equal than function ddoes not need to be run.
+                if (number1 == number2)
+                {
+                    difference = number1;
+                }
+                // Else runs the function as normal.
+                else
+                {
+                    // Run the calculation while the smallest number is not equal to the difference.
+                    while (smallerInt != difference)
                     {
-                        difference = number1 - number2;
-                        number1 = difference;
-                        smallerInt = number2;
-                    }
-                    // Else subtract number1 from number2.
-                    else
-                    {
-                        difference = number2 - number1;
-                        number2 = difference;
-                        smallerInt = number1;
+                        // If number2 is smaller than number1 subtract number2 from number1.
+                        if (number2 < number1)
+                        {
+                            difference = number1 - number2;
+                            number1 = difference;
+                            smallerInt = number2;
+                        }
+                        // Else subtract number1 from number2.
+                        else
+                        {
+                            difference = number2 - number1;
+                            number2 = difference;
+                            smallerInt = number1;
+                        }
                     }
                 }
-            }
 
-            // Returns the value of the GCD.
-            return difference;
+                // Returns the value of the GCD.
+                return difference;
+            }
+            else
+            {
+                difference = 0;
+
+                // Returns the value of the GCD.
+                return difference;
+            }
         }
 
         // Method to return the sum of the array.

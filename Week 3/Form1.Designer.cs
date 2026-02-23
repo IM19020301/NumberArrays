@@ -54,22 +54,30 @@
             this.buttonToString = new System.Windows.Forms.Button();
             this.buttonScalarMultiply = new System.Windows.Forms.Button();
             this.buttonAddConstant = new System.Windows.Forms.Button();
+            this.panelArrayCreation = new System.Windows.Forms.Panel();
+            this.panelSearch = new System.Windows.Forms.Panel();
+            this.panelOutput = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelArrayCreation.SuspendLayout();
+            this.panelSearch.SuspendLayout();
+            this.panelOutput.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelNumberInput
             // 
-            this.labelNumberInput.AutoSize = true;
-            this.labelNumberInput.Location = new System.Drawing.Point(257, 84);
+            this.labelNumberInput.Location = new System.Drawing.Point(30, 10);
             this.labelNumberInput.Name = "labelNumberInput";
-            this.labelNumberInput.Size = new System.Drawing.Size(208, 13);
+            this.labelNumberInput.Size = new System.Drawing.Size(200, 14);
             this.labelNumberInput.TabIndex = 0;
             this.labelNumberInput.Text = "Input Length or numbers seperarted by \",\".";
+            this.labelNumberInput.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // buttonCreateArray
             // 
-            this.buttonCreateArray.Location = new System.Drawing.Point(109, 178);
+            this.buttonCreateArray.Location = new System.Drawing.Point(15, 70);
             this.buttonCreateArray.Name = "buttonCreateArray";
-            this.buttonCreateArray.Size = new System.Drawing.Size(112, 23);
+            this.buttonCreateArray.Size = new System.Drawing.Size(110, 24);
             this.buttonCreateArray.TabIndex = 2;
             this.buttonCreateArray.Text = "Create Empty Array";
             this.buttonCreateArray.UseVisualStyleBackColor = true;
@@ -77,25 +85,25 @@
             // 
             // textBoxNumberInputs
             // 
-            this.textBoxNumberInputs.Location = new System.Drawing.Point(306, 111);
+            this.textBoxNumberInputs.Location = new System.Drawing.Point(50, 40);
             this.textBoxNumberInputs.Name = "textBoxNumberInputs";
-            this.textBoxNumberInputs.Size = new System.Drawing.Size(100, 20);
+            this.textBoxNumberInputs.Size = new System.Drawing.Size(160, 20);
             this.textBoxNumberInputs.TabIndex = 1;
             // 
             // labelLength
             // 
-            this.labelLength.AutoSize = true;
-            this.labelLength.Location = new System.Drawing.Point(153, 218);
+            this.labelLength.Location = new System.Drawing.Point(89, 111);
             this.labelLength.Name = "labelLength";
-            this.labelLength.Size = new System.Drawing.Size(66, 13);
+            this.labelLength.Size = new System.Drawing.Size(80, 14);
             this.labelLength.TabIndex = 0;
             this.labelLength.Text = "Length: N/A";
+            this.labelLength.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // buttonAddNumber
             // 
-            this.buttonAddNumber.Location = new System.Drawing.Point(239, 178);
+            this.buttonAddNumber.Location = new System.Drawing.Point(135, 70);
             this.buttonAddNumber.Name = "buttonAddNumber";
-            this.buttonAddNumber.Size = new System.Drawing.Size(109, 24);
+            this.buttonAddNumber.Size = new System.Drawing.Size(110, 24);
             this.buttonAddNumber.TabIndex = 3;
             this.buttonAddNumber.Text = "Create Full Array";
             this.buttonAddNumber.UseVisualStyleBackColor = true;
@@ -103,19 +111,19 @@
             // 
             // labelOutput
             // 
-            this.labelOutput.AutoSize = true;
-            this.labelOutput.Location = new System.Drawing.Point(189, 246);
+            this.labelOutput.Location = new System.Drawing.Point(20, 12);
             this.labelOutput.Name = "labelOutput";
-            this.labelOutput.Size = new System.Drawing.Size(65, 13);
-            this.labelOutput.TabIndex = 4;
+            this.labelOutput.Size = new System.Drawing.Size(480, 14);
+            this.labelOutput.TabIndex = 0;
             this.labelOutput.Text = "Output: N/A";
+            this.labelOutput.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // buttonSearchIndex
             // 
             this.buttonSearchIndex.Enabled = false;
-            this.buttonSearchIndex.Location = new System.Drawing.Point(409, 177);
+            this.buttonSearchIndex.Location = new System.Drawing.Point(15, 20);
             this.buttonSearchIndex.Name = "buttonSearchIndex";
-            this.buttonSearchIndex.Size = new System.Drawing.Size(75, 23);
+            this.buttonSearchIndex.Size = new System.Drawing.Size(70, 24);
             this.buttonSearchIndex.TabIndex = 4;
             this.buttonSearchIndex.Text = "Search";
             this.buttonSearchIndex.UseVisualStyleBackColor = true;
@@ -123,19 +131,18 @@
             // 
             // labelSearchOutput
             // 
-            this.labelSearchOutput.AutoSize = true;
-            this.labelSearchOutput.Location = new System.Drawing.Point(424, 218);
+            this.labelSearchOutput.Location = new System.Drawing.Point(20, 105);
             this.labelSearchOutput.Name = "labelSearchOutput";
-            this.labelSearchOutput.Size = new System.Drawing.Size(60, 13);
+            this.labelSearchOutput.Size = new System.Drawing.Size(70, 14);
             this.labelSearchOutput.TabIndex = 0;
             this.labelSearchOutput.Text = "Value: N/A";
             // 
             // buttonModifyValue
             // 
             this.buttonModifyValue.Enabled = false;
-            this.buttonModifyValue.Location = new System.Drawing.Point(500, 177);
+            this.buttonModifyValue.Location = new System.Drawing.Point(15, 60);
             this.buttonModifyValue.Name = "buttonModifyValue";
-            this.buttonModifyValue.Size = new System.Drawing.Size(75, 23);
+            this.buttonModifyValue.Size = new System.Drawing.Size(70, 24);
             this.buttonModifyValue.TabIndex = 6;
             this.buttonModifyValue.Text = "Update";
             this.buttonModifyValue.UseVisualStyleBackColor = true;
@@ -143,27 +150,27 @@
             // 
             // labelInput1
             // 
-            this.labelInput1.AutoSize = true;
-            this.labelInput1.Location = new System.Drawing.Point(658, 299);
+            this.labelInput1.Location = new System.Drawing.Point(195, 26);
             this.labelInput1.Name = "labelInput1";
-            this.labelInput1.Size = new System.Drawing.Size(73, 13);
+            this.labelInput1.Size = new System.Drawing.Size(70, 14);
             this.labelInput1.TabIndex = 0;
             this.labelInput1.Text = "Index/Index 1";
+            this.labelInput1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // textBoxInput1
             // 
             this.textBoxInput1.Enabled = false;
-            this.textBoxInput1.Location = new System.Drawing.Point(556, 296);
+            this.textBoxInput1.Location = new System.Drawing.Point(100, 22);
             this.textBoxInput1.Name = "textBoxInput1";
-            this.textBoxInput1.Size = new System.Drawing.Size(75, 20);
+            this.textBoxInput1.Size = new System.Drawing.Size(80, 20);
             this.textBoxInput1.TabIndex = 5;
             // 
             // buttonFindMax
             // 
             this.buttonFindMax.Enabled = false;
-            this.buttonFindMax.Location = new System.Drawing.Point(117, 294);
+            this.buttonFindMax.Location = new System.Drawing.Point(15, 10);
             this.buttonFindMax.Name = "buttonFindMax";
-            this.buttonFindMax.Size = new System.Drawing.Size(75, 23);
+            this.buttonFindMax.Size = new System.Drawing.Size(80, 24);
             this.buttonFindMax.TabIndex = 7;
             this.buttonFindMax.Text = "Max";
             this.buttonFindMax.UseVisualStyleBackColor = true;
@@ -171,19 +178,19 @@
             // 
             // labelMaxValue
             // 
-            this.labelMaxValue.AutoSize = true;
-            this.labelMaxValue.Location = new System.Drawing.Point(114, 332);
+            this.labelMaxValue.Location = new System.Drawing.Point(15, 45);
             this.labelMaxValue.Name = "labelMaxValue";
-            this.labelMaxValue.Size = new System.Drawing.Size(83, 13);
-            this.labelMaxValue.TabIndex = 8;
+            this.labelMaxValue.Size = new System.Drawing.Size(100, 14);
+            this.labelMaxValue.TabIndex = 0;
             this.labelMaxValue.Text = "Max Value: N/A";
+            this.labelMaxValue.Click += new System.EventHandler(this.labelMaxValue_Click);
             // 
             // buttonAreEqual
             // 
             this.buttonAreEqual.Enabled = false;
-            this.buttonAreEqual.Location = new System.Drawing.Point(225, 294);
+            this.buttonAreEqual.Location = new System.Drawing.Point(125, 10);
             this.buttonAreEqual.Name = "buttonAreEqual";
-            this.buttonAreEqual.Size = new System.Drawing.Size(75, 23);
+            this.buttonAreEqual.Size = new System.Drawing.Size(80, 24);
             this.buttonAreEqual.TabIndex = 9;
             this.buttonAreEqual.Text = "Equal";
             this.buttonAreEqual.UseVisualStyleBackColor = true;
@@ -191,36 +198,36 @@
             // 
             // labelAreEqual
             // 
-            this.labelAreEqual.AutoSize = true;
-            this.labelAreEqual.Location = new System.Drawing.Point(217, 332);
+            this.labelAreEqual.Location = new System.Drawing.Point(125, 45);
             this.labelAreEqual.Name = "labelAreEqual";
-            this.labelAreEqual.Size = new System.Drawing.Size(79, 13);
-            this.labelAreEqual.TabIndex = 10;
+            this.labelAreEqual.Size = new System.Drawing.Size(100, 14);
+            this.labelAreEqual.TabIndex = 0;
             this.labelAreEqual.Text = "Are Equal: N/A";
+            this.labelAreEqual.Click += new System.EventHandler(this.labelAreEqual_Click);
             // 
             // textBoxInput2
             // 
             this.textBoxInput2.Enabled = false;
-            this.textBoxInput2.Location = new System.Drawing.Point(555, 331);
+            this.textBoxInput2.Location = new System.Drawing.Point(100, 62);
             this.textBoxInput2.Name = "textBoxInput2";
-            this.textBoxInput2.Size = new System.Drawing.Size(76, 20);
+            this.textBoxInput2.Size = new System.Drawing.Size(80, 20);
             this.textBoxInput2.TabIndex = 11;
             // 
             // labelInput2
             // 
-            this.labelInput2.AutoSize = true;
-            this.labelInput2.Location = new System.Drawing.Point(658, 331);
+            this.labelInput2.Location = new System.Drawing.Point(195, 66);
             this.labelInput2.Name = "labelInput2";
-            this.labelInput2.Size = new System.Drawing.Size(74, 13);
-            this.labelInput2.TabIndex = 12;
+            this.labelInput2.Size = new System.Drawing.Size(70, 14);
+            this.labelInput2.TabIndex = 0;
             this.labelInput2.Text = "Value/Index 2";
+            this.labelInput2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // buttonFindGCD
             // 
             this.buttonFindGCD.Enabled = false;
-            this.buttonFindGCD.Location = new System.Drawing.Point(315, 295);
+            this.buttonFindGCD.Location = new System.Drawing.Point(235, 10);
             this.buttonFindGCD.Name = "buttonFindGCD";
-            this.buttonFindGCD.Size = new System.Drawing.Size(88, 23);
+            this.buttonFindGCD.Size = new System.Drawing.Size(100, 24);
             this.buttonFindGCD.TabIndex = 13;
             this.buttonFindGCD.Text = "buttonFindGCD";
             this.buttonFindGCD.UseVisualStyleBackColor = true;
@@ -228,19 +235,19 @@
             // 
             // labelFindGCD
             // 
-            this.labelFindGCD.AutoSize = true;
-            this.labelFindGCD.Location = new System.Drawing.Point(325, 329);
+            this.labelFindGCD.Location = new System.Drawing.Point(235, 45);
             this.labelFindGCD.Name = "labelFindGCD";
-            this.labelFindGCD.Size = new System.Drawing.Size(56, 13);
-            this.labelFindGCD.TabIndex = 14;
+            this.labelFindGCD.Size = new System.Drawing.Size(100, 14);
+            this.labelFindGCD.TabIndex = 0;
             this.labelFindGCD.Text = "GCD: N/A";
+            this.labelFindGCD.Click += new System.EventHandler(this.labelFindGCD_Click);
             // 
             // buttonFindSum
             // 
             this.buttonFindSum.Enabled = false;
-            this.buttonFindSum.Location = new System.Drawing.Point(117, 364);
+            this.buttonFindSum.Location = new System.Drawing.Point(15, 70);
             this.buttonFindSum.Name = "buttonFindSum";
-            this.buttonFindSum.Size = new System.Drawing.Size(75, 23);
+            this.buttonFindSum.Size = new System.Drawing.Size(80, 24);
             this.buttonFindSum.TabIndex = 15;
             this.buttonFindSum.Text = "Sum";
             this.buttonFindSum.UseVisualStyleBackColor = true;
@@ -248,28 +255,26 @@
             // 
             // labelFindSum
             // 
-            this.labelFindSum.AutoSize = true;
-            this.labelFindSum.Location = new System.Drawing.Point(127, 401);
+            this.labelFindSum.Location = new System.Drawing.Point(15, 100);
             this.labelFindSum.Name = "labelFindSum";
-            this.labelFindSum.Size = new System.Drawing.Size(54, 13);
-            this.labelFindSum.TabIndex = 16;
+            this.labelFindSum.Size = new System.Drawing.Size(100, 14);
+            this.labelFindSum.TabIndex = 0;
             this.labelFindSum.Text = "Sum: N/A";
             // 
             // labelFindAverage
             // 
-            this.labelFindAverage.AutoSize = true;
-            this.labelFindAverage.Location = new System.Drawing.Point(221, 401);
+            this.labelFindAverage.Location = new System.Drawing.Point(125, 100);
             this.labelFindAverage.Name = "labelFindAverage";
-            this.labelFindAverage.Size = new System.Drawing.Size(73, 13);
-            this.labelFindAverage.TabIndex = 18;
+            this.labelFindAverage.Size = new System.Drawing.Size(100, 14);
+            this.labelFindAverage.TabIndex = 0;
             this.labelFindAverage.Text = "Average: N/A";
             // 
             // buttonFindAverage
             // 
             this.buttonFindAverage.Enabled = false;
-            this.buttonFindAverage.Location = new System.Drawing.Point(211, 364);
+            this.buttonFindAverage.Location = new System.Drawing.Point(125, 70);
             this.buttonFindAverage.Name = "buttonFindAverage";
-            this.buttonFindAverage.Size = new System.Drawing.Size(75, 23);
+            this.buttonFindAverage.Size = new System.Drawing.Size(80, 24);
             this.buttonFindAverage.TabIndex = 17;
             this.buttonFindAverage.Text = "Average";
             this.buttonFindAverage.UseVisualStyleBackColor = true;
@@ -278,9 +283,9 @@
             // buttonToString
             // 
             this.buttonToString.Enabled = false;
-            this.buttonToString.Location = new System.Drawing.Point(306, 364);
+            this.buttonToString.Location = new System.Drawing.Point(235, 70);
             this.buttonToString.Name = "buttonToString";
-            this.buttonToString.Size = new System.Drawing.Size(75, 23);
+            this.buttonToString.Size = new System.Drawing.Size(80, 24);
             this.buttonToString.TabIndex = 19;
             this.buttonToString.Text = "ToString";
             this.buttonToString.UseVisualStyleBackColor = true;
@@ -288,9 +293,9 @@
             // 
             // buttonScalarMultiply
             // 
-            this.buttonScalarMultiply.Location = new System.Drawing.Point(427, 295);
+            this.buttonScalarMultiply.Location = new System.Drawing.Point(355, 10);
             this.buttonScalarMultiply.Name = "buttonScalarMultiply";
-            this.buttonScalarMultiply.Size = new System.Drawing.Size(87, 23);
+            this.buttonScalarMultiply.Size = new System.Drawing.Size(90, 24);
             this.buttonScalarMultiply.TabIndex = 20;
             this.buttonScalarMultiply.Text = "Scalar Multiply";
             this.buttonScalarMultiply.UseVisualStyleBackColor = true;
@@ -298,49 +303,96 @@
             // 
             // buttonAddConstant
             // 
-            this.buttonAddConstant.Location = new System.Drawing.Point(427, 364);
+            this.buttonAddConstant.Location = new System.Drawing.Point(355, 70);
             this.buttonAddConstant.Name = "buttonAddConstant";
-            this.buttonAddConstant.Size = new System.Drawing.Size(87, 23);
+            this.buttonAddConstant.Size = new System.Drawing.Size(90, 24);
             this.buttonAddConstant.TabIndex = 21;
             this.buttonAddConstant.Text = "Add Constant";
             this.buttonAddConstant.UseVisualStyleBackColor = true;
             this.buttonAddConstant.Click += new System.EventHandler(this.ButtonAddConstant_Click);
             // 
+            // panelArrayCreation
+            // 
+            this.panelArrayCreation.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panelArrayCreation.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelArrayCreation.Controls.Add(this.labelNumberInput);
+            this.panelArrayCreation.Controls.Add(this.textBoxNumberInputs);
+            this.panelArrayCreation.Controls.Add(this.buttonCreateArray);
+            this.panelArrayCreation.Controls.Add(this.buttonAddNumber);
+            this.panelArrayCreation.Controls.Add(this.labelLength);
+            this.panelArrayCreation.Location = new System.Drawing.Point(100, 60);
+            this.panelArrayCreation.Name = "panelArrayCreation";
+            this.panelArrayCreation.Size = new System.Drawing.Size(260, 140);
+            this.panelArrayCreation.TabIndex = 0;
+            // 
+            // panelSearch
+            // 
+            this.panelSearch.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panelSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelSearch.Controls.Add(this.buttonSearchIndex);
+            this.panelSearch.Controls.Add(this.buttonModifyValue);
+            this.panelSearch.Controls.Add(this.textBoxInput1);
+            this.panelSearch.Controls.Add(this.textBoxInput2);
+            this.panelSearch.Controls.Add(this.labelInput2);
+            this.panelSearch.Controls.Add(this.labelInput1);
+            this.panelSearch.Controls.Add(this.labelSearchOutput);
+            this.panelSearch.Location = new System.Drawing.Point(398, 60);
+            this.panelSearch.Name = "panelSearch";
+            this.panelSearch.Size = new System.Drawing.Size(280, 140);
+            this.panelSearch.TabIndex = 0;
+            // 
+            // panelOutput
+            // 
+            this.panelOutput.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panelOutput.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelOutput.Controls.Add(this.labelOutput);
+            this.panelOutput.Location = new System.Drawing.Point(130, 220);
+            this.panelOutput.Name = "panelOutput";
+            this.panelOutput.Size = new System.Drawing.Size(520, 40);
+            this.panelOutput.TabIndex = 0;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.buttonFindMax);
+            this.panel1.Controls.Add(this.labelMaxValue);
+            this.panel1.Controls.Add(this.buttonFindSum);
+            this.panel1.Controls.Add(this.labelFindSum);
+            this.panel1.Controls.Add(this.buttonAddConstant);
+            this.panel1.Controls.Add(this.buttonAreEqual);
+            this.panel1.Controls.Add(this.buttonScalarMultiply);
+            this.panel1.Controls.Add(this.labelAreEqual);
+            this.panel1.Controls.Add(this.buttonToString);
+            this.panel1.Controls.Add(this.buttonFindAverage);
+            this.panel1.Controls.Add(this.labelFindGCD);
+            this.panel1.Controls.Add(this.labelFindAverage);
+            this.panel1.Controls.Add(this.buttonFindGCD);
+            this.panel1.Location = new System.Drawing.Point(160, 280);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(460, 130);
+            this.panel1.TabIndex = 22;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.buttonAddConstant);
-            this.Controls.Add(this.buttonScalarMultiply);
-            this.Controls.Add(this.buttonToString);
-            this.Controls.Add(this.labelFindAverage);
-            this.Controls.Add(this.buttonFindAverage);
-            this.Controls.Add(this.labelFindSum);
-            this.Controls.Add(this.buttonFindSum);
-            this.Controls.Add(this.labelFindGCD);
-            this.Controls.Add(this.buttonFindGCD);
-            this.Controls.Add(this.labelInput2);
-            this.Controls.Add(this.textBoxInput2);
-            this.Controls.Add(this.labelAreEqual);
-            this.Controls.Add(this.buttonAreEqual);
-            this.Controls.Add(this.labelMaxValue);
-            this.Controls.Add(this.buttonFindMax);
-            this.Controls.Add(this.labelInput1);
-            this.Controls.Add(this.textBoxInput1);
-            this.Controls.Add(this.buttonModifyValue);
-            this.Controls.Add(this.labelSearchOutput);
-            this.Controls.Add(this.buttonSearchIndex);
-            this.Controls.Add(this.labelOutput);
-            this.Controls.Add(this.buttonAddNumber);
-            this.Controls.Add(this.labelLength);
-            this.Controls.Add(this.textBoxNumberInputs);
-            this.Controls.Add(this.buttonCreateArray);
-            this.Controls.Add(this.labelNumberInput);
+            this.ClientSize = new System.Drawing.Size(784, 461);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelOutput);
+            this.Controls.Add(this.panelSearch);
+            this.Controls.Add(this.panelArrayCreation);
+            this.MaximumSize = new System.Drawing.Size(800, 500);
+            this.MinimumSize = new System.Drawing.Size(800, 500);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.panelArrayCreation.ResumeLayout(false);
+            this.panelArrayCreation.PerformLayout();
+            this.panelSearch.ResumeLayout(false);
+            this.panelSearch.PerformLayout();
+            this.panelOutput.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -372,6 +424,10 @@
         private System.Windows.Forms.Button buttonToString;
         private System.Windows.Forms.Button buttonScalarMultiply;
         private System.Windows.Forms.Button buttonAddConstant;
+        private System.Windows.Forms.Panel panelArrayCreation;
+        private System.Windows.Forms.Panel panelSearch;
+        private System.Windows.Forms.Panel panelOutput;
+        private System.Windows.Forms.Panel panel1;
     }
 }
 
