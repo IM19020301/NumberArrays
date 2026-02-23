@@ -404,5 +404,42 @@ namespace Week_3
             }
         }
 
+        // On button press adds inputed constant to every element.
+        private void ButtonAddConstant_Click(object sender, EventArgs e)
+        {
+            // Declares varaibles.
+            int constant;
+            bool validConstant;
+
+            // Sets variables.
+            validConstant = false;
+
+            // Checks if targetIndex2 is valid and able to be used.
+            if (Int32.TryParse(textBoxInput2.Text, out constant) && constant >= 0)
+            {
+                // Marks targetIndex2 as valid.
+                validConstant = true;
+            }
+            else
+            {
+                // Provids feedback through the label.
+                labelOutput.Text = "Invalid constant";
+            }
+
+            // If constant is valid.
+            if (validConstant == true)
+            {
+                // Runs numberArray the method.
+                numberArray.AddConstant(constant);
+
+                // Provids feedback through the label.
+                labelOutput.Text = "Constant added to array.";
+            }
+            else
+            {
+                // Provids feedback through the label.
+                labelOutput.Text = "Invalid constant";
+            }
+        }
     }
 }

@@ -53,6 +53,7 @@
             this.buttonFindAverage = new System.Windows.Forms.Button();
             this.buttonToString = new System.Windows.Forms.Button();
             this.buttonScalarMultiply = new System.Windows.Forms.Button();
+            this.buttonAddConstant = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // labelNumberInput
@@ -295,11 +296,22 @@
             this.buttonScalarMultiply.UseVisualStyleBackColor = true;
             this.buttonScalarMultiply.Click += new System.EventHandler(this.ButtonScalarMultiply_Click);
             // 
+            // buttonAddConstant
+            // 
+            this.buttonAddConstant.Location = new System.Drawing.Point(427, 364);
+            this.buttonAddConstant.Name = "buttonAddConstant";
+            this.buttonAddConstant.Size = new System.Drawing.Size(87, 23);
+            this.buttonAddConstant.TabIndex = 21;
+            this.buttonAddConstant.Text = "Add Constant";
+            this.buttonAddConstant.UseVisualStyleBackColor = true;
+            this.buttonAddConstant.Click += new System.EventHandler(this.ButtonAddConstant_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.buttonAddConstant);
             this.Controls.Add(this.buttonScalarMultiply);
             this.Controls.Add(this.buttonToString);
             this.Controls.Add(this.labelFindAverage);
@@ -359,6 +371,7 @@
         private System.Windows.Forms.Button buttonFindAverage;
         private System.Windows.Forms.Button buttonToString;
         private System.Windows.Forms.Button buttonScalarMultiply;
+        private System.Windows.Forms.Button buttonAddConstant;
     }
 }
 
